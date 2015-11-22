@@ -15,18 +15,10 @@
     <Label text="Valeur d'entrée :" GridPane.columnIndex="0" GridPane.rowIndex="1"/>
     <TextField GridPane.columnIndex="1" GridPane.rowIndex="1"/>
 
-    <ComboBox fx:id="fruitCombo" GridPane.columnIndex="0" GridPane.rowIndex="2" promptText="choose">
-        <items>
-                <String fx:value="Apple" />
-                <String fx:value="Orange" />
-                <String fx:value="Pear" />
-        </items>
-    </ComboBox>
-
 
     <HBox spacing="10" alignment="bottom_right"
           GridPane.columnIndex="1" GridPane.rowIndex="4">
-        <Button text="Sign In" onAction="#handleSubmitButtonAction"/>
+        <Button text="Calculer" onAction="#handleSubmitButtonAction"/>
     </HBox>
 
     <Text fx:id="actiontarget" GridPane.columnIndex="1" GridPane.rowIndex="6"/>
