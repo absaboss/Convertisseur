@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import java.net.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.collections.*?>
+<?import java.util.*?>
+
+<GridPane fx:controller="com.absalon.ConvertisseurFX" xmlns:fx="http://javafx.com/fxml" alignment="center" hgap="10" vgap="10" styleClass="root">
+
+    <padding><Insets top="25" right="25" bottom="10" left="25"/></padding>
+
+    <Text id="bienvenu-text" text="Bienvenu" GridPane.columnIndex="0" GridPane.rowIndex="0" GridPane.columnSpan="2"/>
+    <Label text="Valeur d'entrée :" GridPane.columnIndex="0" GridPane.rowIndex="1"/>
+    <TextField GridPane.columnIndex="1" GridPane.rowIndex="1"/>
+
+    <ComboBox fx:id="fruitCombo" GridPane.columnIndex="0" GridPane.rowIndex="2" promptText="choose">
+        <items>
+                <String fx:value="Apple" />
+                <String fx:value="Orange" />
+                <String fx:value="Pear" />
+        </items>
+    </ComboBox>
+
+
+    <HBox spacing="10" alignment="bottom_right"
+          GridPane.columnIndex="1" GridPane.rowIndex="4">
+        <Button text="Sign In" onAction="#handleSubmitButtonAction"/>
+    </HBox>
+
+    <Text fx:id="actiontarget" GridPane.columnIndex="1" GridPane.rowIndex="6"/>
+
+</GridPane>
+
