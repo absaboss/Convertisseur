@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import java.net.*?>
+<?import javafx.collections.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.paint.*?>
+<?import javafx.scene.text.*?>
+
+<GridPane fx:controller="com.absalon.Controller.ConvertisseurFXController" xmlns:fx="http://javafx.com/fxml" alignment="center" hgap="10" vgap="10" styleClass="root">
+
+    <padding><Insets top="0" right="25" bottom="10" left="25"/></padding>
+
+    <stylesheets>
+        <URL value="@Login.css"/>
+    </stylesheets>
+
+    <Text id="bienvenu_text" text="Bienvenu" GridPane.columnIndex="0" GridPane.rowIndex="0" GridPane.columnSpan="2"/>
+    <Label text="Valeur d'entrée:" GridPane.columnIndex="0" GridPane.rowIndex="2"/>
+    <TextField fx:id="inputVal" text="1" GridPane.columnIndex="1" GridPane.rowIndex="2"/>
+
+    <Label text="Devise d'entrée : " GridPane.columnIndex="0" GridPane.rowIndex="4"/>
+    <Label text="Devise de sortie : " GridPane.columnIndex="0" GridPane.rowIndex="5"/>
+
+    <ComboBox  fx:id="comboDevEntrant" minWidth="150" GridPane.columnIndex="1" GridPane.rowIndex="4">
+         <items>
+             <FXCollections fx:factory="observableArrayList">
+                 <String fx:value="Euro"/>
+                 <String fx:value="Livre Sterling" />
+                 <String fx:value="Dollar Canadien" />
+                 <String fx:value="Dollar des Etats Unis" />
+                 <String fx:value="Franc Suisse"/>
+                 <String fx:value="Dirham Marocain"/>
+             </FXCollections>
+         </items>
+     </ComboBox>
+
+     <ComboBox  fx:id="comboDevSortant" minWidth="150" GridPane.columnIndex="1" GridPane.rowIndex="5">
+        <items>
+            <FXCollections fx:factory="observableArrayList" >
+                <String fx:value="Euro"/>
+                <String fx:value="Livre Sterling" />
+                <String fx:value="Dollar Canadien" />
+                <String fx:value="Dollar des Etats Unis" />
+                <String fx:value="Franc Suisse"/>
+                <String fx:value="Dirham Marocain"/>
+            </FXCollections>
+        </items>
+     </ComboBox>
+
+    <Label text="Valeur de sortie:" GridPane.columnIndex="0" GridPane.rowIndex="7"/>
+    <TextField fx:id="outputVal" editable="false" GridPane.columnIndex="1" GridPane.rowIndex="7"/>
+
+    <HBox spacing="10" alignment="bottom_right"
+          GridPane.columnIndex="1" GridPane.rowIndex="10">
+        <Button text="Calculer" onAction="#handleSubmitButtonAction"/>
+    </HBox>
+
+    <Text fx:id="actiontarget" GridPane.columnIndex="1" GridPane.rowIndex="11"/>
+
+</GridPane>
+
